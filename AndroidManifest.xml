@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.pinminder"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="21"
+        android:targetSdkVersion="22" />
+
+    <permission
+        android:name="com.example.pinminder.locationapi.maps.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.example.pinminder.locationapi.maps.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> 
+    <uses-feature android:name="android.hardware.location" android:required="true" />
+    <uses-feature android:name="android.hardware.location.gps" android:required="false" />
+    
+    <!-- Permission to start Alarm on device reboot -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.MyAppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".SplashActivity2"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".WriteActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme" >
+        </activity>
+        <activity
+            android:name=".FilterAcitivy"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".list.TestActivity"
+            android:label="@string/app_name" >
+        </activity>
+        
+        <activity
+            android:name=".list.SwipeActivity"
+            android:label="@string/app_name"
+             android:theme="@style/AppTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+                <meta-data android:name="android.app.searchable"
+                   android:resource="@xml/searchable"/>
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_key" >
+        </meta-data>
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" >
+        </meta-data>
+
+        <activity
+            android:name=".CreateNotificationActivity"
+            android:label="@string/title_activity_create_notification" >
+        </activity>
+        <activity
+            android:name=".AndroidGPSTrackingActivity"
+            android:label="@string/title_activity_create_notification" >
+        </activity>
+        <activity
+            android:name=".dialog.DialogActivity"
+            android:theme="@android:style/Theme.Holo.Light.Dialog"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".dialog.DeleteActivity"
+            android:theme="@android:style/Theme.Holo.Light.Dialog"
+            android:label="완료" >
+        </activity>
+        <activity
+            android:name=".ViewPagerActivity"
+            android:label="@string/app_name" >
+        </activity>
+        
+         <receiver android:name=".model.AlarmReceiver">
+	      <intent-filter>
+	           <action android:name="android.intent.action.BOOT_COMPLETED"/>
+	      </intent-filter>
+        </receiver>
+
+        <!-- Will not be called unless the application explicitly enables it -->
+        <receiver android:name=".model.DeviceBootReceiver"
+            android:enabled="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        
+        <service android:name=".model.PushEvent" android:enabled="true">
+         </service>
+    </application>
+
+</manifest>

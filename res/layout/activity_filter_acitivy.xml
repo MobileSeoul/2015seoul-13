@@ -1,0 +1,72 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.uni.unitonwanttoapp.FilterAcitivy" >
+
+    <EditText
+        android:id="@+id/filter_word"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="포함되어야 하는 단어가 있다면 입력해주세요" />
+
+    <EditText
+        android:id="@+id/filter_place"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="지역구를 검색해주세요" />
+
+    <CheckBox
+        android:id="@+id/noti_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="알림 받기 되어 있는 할 일만 보기" >
+    </CheckBox>
+
+    <CheckBox
+        android:id="@+id/loc_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="내 주변 지역만 보기" >
+    </CheckBox>
+    
+    <SeekBar
+        android:id="@+id/loc_seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:progress="100"
+        android:max="1000"
+        android:paddingTop="20dp" />
+    
+    <!--  TextViews for SeekBarlegend -->
+    
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal" >
+        <TextView
+            android:id="@+id/tvLabel1"
+            android:paddingLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="100" />
+        <TextView
+            android:id="@+id/tvLabel3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:paddingRight="10dp"
+            android:text="1000" />
+    </RelativeLayout>
+    
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:paddingLeft="10dp"
+        android:text="Result" />
+
+</LinearLayout>

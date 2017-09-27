@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="#ffffff"
+    android:layout_height="500px"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:layout_marginLeft="60px"
+        android:layout_marginTop="60px"
+        android:orientation="horizontal" >
+        <ImageView
+            android:background="@drawable/check_icon"
+	        android:layout_height="80px"
+	        android:layout_width="80px"
+	        android:layout_marginRight="30px"
+	        android:text="완료"
+	        android:textSize="20sp" />
+	    <TextView
+	        android:layout_height="100px"
+	        android:layout_width="match_parent"
+	        android:text="완료"
+	        android:textSize="20sp" />
+    </LinearLayout>
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="150px"
+        android:layout_marginRight="30px"
+        android:layout_marginLeft="30px"
+        android:layout_marginTop="30px"
+        android:text="완료된 항목을 삭제하겠습니까?"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="190px"
+        android:orientation="horizontal" >
+
+        <Button
+            android:background="@drawable/white_button"
+            android:id="@+id/okBtn"
+            android:layout_width="0px"
+            android:textSize="20sp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+       		android:layout_gravity="center_vertical"
+       		android:gravity="center"
+            android:layout_weight="0.5"
+            android:text="아니요" />
+
+        <Button
+            android:background="@drawable/white_button"
+            android:id="@+id/cancelBtn"
+            android:layout_width="0px"
+            android:textSize="20sp"
+            android:layout_centerInParent="true"
+        	android:layout_gravity="center_vertical"
+	        android:gravity="center"
+	        android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="예" />
+    </LinearLayout>
+
+</LinearLayout>

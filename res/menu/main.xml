@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <!-- 찾기 버튼 -->
+    <item android:id="@+id/action_search"
+      android:icon="@drawable/search_icon"
+      android:title="action_search"
+      android:showAsAction="always"
+      android:orderInCategory="1"
+      android:actionViewClass="android.widget.SearchView"/>
+
+    <!-- 필터버튼 -->
+    <item android:id="@+id/action_location_found"
+          android:icon="@drawable/what_icon"
+          android:title="action_location_found"
+          android:orderInCategory="2"
+          android:showAsAction="ifRoom" />
+
+</menu>

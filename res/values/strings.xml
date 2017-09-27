@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">PIN Minder</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_filter_acitivy">FilterAcitivy</string>
+    <string name="title_activity_create_notification">CreateNotificationActivity</string>
+    <string name="title_activity_notification_receiver">NotificationReceiverActivity</string>
+    <string name="menu_settings1">NotificationReceiverActivity</string>
+    <string name="menu_settings2">NotificationReceiverActivity</string>
+    <string name="menu_settings3">NotificationReceiverActivity</string>
+    <string name="menu_settings4">NotificationReceiverActivity</string>
+    <string name="menu_settings5">NotificationReceiverActivity</string>
+    <string name="menu_settings6">NotificationReceiverActivity</string>
+    <string name="menu_settings7">NotificationReceiverActivity</string>
+    <string name="menu_settings8">NotificationReceiverActivity</string>
+    <string name="menu_settings9">NotificationReceiverActivity</string>
+    <string name="menu_settings10">NotificationReceiverActivity</string>
+    <string name="menu_settings11">NotificationReceiverActivity</string>
+    <string name="title_activity_android_gpstracking">AndroidGPSTrackingActivity</string>
+
+</resources>
